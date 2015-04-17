@@ -51,9 +51,9 @@ console.log(query('десет + десет'));
 console.log(query('десет'));
 console.log(query('сто + крак'));
 
-app.get('/', function (req, res) {
-  res.send(addon.hello());
-});
+// app.get('/', function (req, res) {
+//   res.send(addon.hello());
+// });
 
 app.get('/vectorize', function (req, res) {
   var expr = req.query.expression;
