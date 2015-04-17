@@ -57,6 +57,7 @@ app.get('/', function (req, res) {
 
 app.get('/vectorize', function (req, res) {
   var expr = req.query.expression;
+  console.log(expr);
   var words = query(expr);
   res.json({words: words});
 });

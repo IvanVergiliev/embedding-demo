@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <form>
-      <input type="text" placeholder="Enter expression" id="expression" />
+      <input class="form-control" type="text" placeholder="Въведи израз" id="expression" autocapitalize="off" />
     </form>
-    <button id="vectorize">Vectorize it!</button>
+    <button class="btn btn-success btn-lg" id="vectorize">Векторизирай!</button>
     <div id="results" />
     <script src="jquery-2.1.3.min.js"></script>
     <script src="index.js"></script>
