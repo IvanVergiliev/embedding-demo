@@ -73,7 +73,7 @@ vector<string> findClosest(const Vector& v);
 long long a;
 long long b;
 long long words;
-long long size;
+long long wordCount;
 float len;
 float* M;
 char* vocab;
@@ -87,9 +87,9 @@ int loadData(const string& filename) {
     return -1;
   }
   fscanf(f, "%lld", &words);
-  fscanf(f, "%lld", &size);
+  fscanf(f, "%lld", &wordCount);
   vocab = (char *)malloc((long long)words * max_w * sizeof(char));
-  repr.resize(words, Vector(size));
+  repr.resize(words, Vector(wordCount));
   for (b = 0; b < words; b++) {
     a = 0;
     while (1) {
@@ -99,7 +99,7 @@ int loadData(const string& filename) {
     }
     vocab[b * max_w + a] = 0;
     wordIndex[string(&vocab[b * max_w])] = b;
-    for (a = 0; a < size; a++) {
+    for (a = 0; a < wordCount; a++) {
       fread(&repr[b][a], sizeof(float), 1, f);
     }
     repr[b].normalize();
